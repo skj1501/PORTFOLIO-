@@ -1,6 +1,11 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RxEnvelopeClosed } from "react-icons/rx";
 
+type Skill = {
+  skill_name: string;
+  image: null;
+};
+
 export const SKILL_DATA = [
   "Java",
   "Python",
@@ -15,11 +20,11 @@ export const SKILL_DATA = [
   "Teamwork",
   "Event Management",
   "Problem Solving",
-].map((skill_name) => ({ skill_name, image: null }));
-export const FRONTEND_SKILL = [] as const;
-export const BACKEND_SKILL = [] as const;
-export const FULLSTACK_SKILL = [] as const;
-export const OTHER_SKILL = [] as const;
+].map((skill_name): Skill => ({ skill_name, image: null }));
+export const FRONTEND_SKILL: Skill[] = [];
+export const BACKEND_SKILL: Skill[] = [];
+export const FULLSTACK_SKILL: Skill[] = [];
+export const OTHER_SKILL: Skill[] = [];
 
 export const SOCIALS = [
   { name: "GitHub", icon: FaGithub, link: "https://github.com/Vivina03" },
